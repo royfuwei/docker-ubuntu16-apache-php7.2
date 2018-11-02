@@ -1,7 +1,7 @@
 ## Dockerfile make ubuntu16.04 apache php7.2
 
 
-Dockerfile製作參考[1and1internet 的ubuntu-16-apache-php-5.6](https://github.com/1and1internet/ubuntu-16-apache-php-5.6)
+Dockerfile製作參考[1and1internet 的ubuntu-16-apache-php-7.2](https://github.com/1and1internet/ubuntu-16-apache-php-7.2)
 並借用`files/`設定
 
 ### 主要流程
@@ -33,7 +33,7 @@ PORT=80
 WEB_ROOT="/var/www/" # 只能使用絕對路徑
 
 # 執行docker run
-docker run -u ${UID}:0 -p ${PORT}:80 -v ${WEB_ROOT}:/var/www/ royfuwei/ubuntu16-apache-php5.6
+docker run -u ${UID}:0 -p ${PORT}:80 -v ${WEB_ROOT}:/var/www/ royfuwei/ubuntu16-apache-php7.2
 ```
 
 2. 直接使用`docker-compose`執行，直接使用image
@@ -74,7 +74,7 @@ docker restart <container id>
 
 ___
 
-Dockerfile製作參考[1and1internet 的ubuntu-16-apache-php-5.6](https://github.com/1and1internet/ubuntu-16-apache-php-5.6)
+Dockerfile製作參考[1and1internet 的ubuntu-16-apache-php-7.2](https://github.com/1and1internet/ubuntu-16-apache-php-7.2)
 
 使用supervisor運行管理的ubuntu16.04
 基於ubuntu:xenial，先自製加上supervisor運行管理的ubuntu，產生的自製ubuntu16 image。
